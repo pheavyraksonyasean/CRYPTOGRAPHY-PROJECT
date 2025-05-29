@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symmetric Encryption & Decryption</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-lock"></i> Key Distribution using Symmetric Encryption & Decryption</h1>
+    <div class="sections">
+
+        <!--Encryption-->
+      <div class="box">
+        <h2><i class="fas fa-user-secret"></i> Encryption</h2>
+        <label for="plainText">Plain Text</label>
+        <textarea id="plainText" rows="4" placeholder="Enter plain text..."></textarea>
+        <button onclick="generateAESKey()" style="margin-top: 8px; background-color: #4c0d0d; color: white;">
+                🔑 Generate AES Key
+        </button>
+        <label for="aesKey">AES Key (Base64)</label>
+        <input type="text" id="aesKey" readonly />
+        <button onclick="encrypt()" style="background-color: rgb(200, 3, 3);">🔐 Encrypt</button>
+        <label for="cipherOutput">Encrypted Text</label>
+        <textarea id="cipherOutput" rows="4" readonly></textarea>
+      </div>
+
+      <!-- Decryption -->
+      <div class="box">
+        <h2><i class="fas fa-unlock"></i> Decryption</h2>
+        <label for="cipherInput">Cipher Text</label>
+        <textarea id="cipherInput" rows="4" placeholder="Paste cipher text..."></textarea>
+        <label for="decryptKey">AES Key (Base64)</label>
+        <input type="text" id="decryptKey" placeholder="Paste AES key..." />
+        <button onclick="decrypt()" style="background-color: rgb(154, 2, 2);">🔓 Decrypt</button>
+        <label for="plainOutput">Decrypted Text</label>
+        <textarea id="plainOutput" rows="4" readonly></textarea>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
